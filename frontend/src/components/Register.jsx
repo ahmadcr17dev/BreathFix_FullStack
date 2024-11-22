@@ -7,7 +7,7 @@ const Register = () => {
       <div className="bg-white p-8 border rounded-lg shadow-lg w-full max-w-md font-poppins">
         {/* Website Name */}
         <h1 className="text-2xl font-bold text-indigo-600 text-center mb-4">
-          MyWebsite
+          PenCrafted
         </h1>
         {/* Warming Line */}
         <p className="text-center text-gray-600 mb-6">

@@ -7,7 +7,7 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen ">
       <div className="bg-white border rounded-lg shadow-lg p-8 w-full max-w-md font-poppins">
         <h1 className="text-2xl font-bold text-center text-indigo-600 mb-4">
-          Welcome to MyWebsite
+          Welcome to PenCrafted
         </h1>
         <p className="text-center text-gray-500 mb-6">
           We’re glad to have you back! Please log in to continue.
