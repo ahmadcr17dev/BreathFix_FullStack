@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { Bars } from "react-loader-spinner";
 import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
 
 const HomePage = () => {
   const [loading, setloading] = useState(true);
@@ -30,6 +31,7 @@ const HomePage = () => {
       ) : (
         <>
           <Navbar />
+          <HeroSection />
           <Footer />
         </>
       )}
