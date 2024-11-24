@@ -12,6 +12,10 @@ const LoginPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    document.title = "Login - BreathFix";
+  });
+
   return (
     <>
       {loading ? (

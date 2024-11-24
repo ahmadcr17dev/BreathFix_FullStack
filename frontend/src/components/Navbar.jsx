@@ -5,13 +5,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="bg-gray-800 text-white sticky top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center font-poppins">
           {/* Logo */}
           <div className="flex-shrink-0 text-2xl font-bold">
             <a href="/" className="hover:text-gray-300">
-              PenCrafted
+              BreathFix
             </a>
           </div>
 

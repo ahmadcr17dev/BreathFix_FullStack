@@ -12,6 +12,10 @@ const RegisterPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    document.title = "Register - BreathFix";
+  });
+
   return (
     <>
       {loading ? (

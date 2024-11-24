@@ -14,6 +14,10 @@ const HomePage = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    document.title = "Home - BreathFix";
+  });
+
   return (
     <>
       {loading ? (
