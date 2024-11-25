@@ -19,31 +19,31 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8">
             <NavLink
               to="/"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-bold"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
             >
               Home
             </NavLink>
             <a
-              href="/blog"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-bold"
+              href="/admin"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
             >
-              Blog
+              Admin
             </a>
             <a
               href="/about"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-bold"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
             >
               About Us
             </a>
             <NavLink
               to="/login"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-bold"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
             >
               Login
             </NavLink>
             <NavLink
               to="/register"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-bold"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
             >
               Register
             </NavLink>

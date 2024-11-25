@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { Bars } from "react-loader-spinner";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
+import Testimonials from "../components/Testimonial";
 
 const HomePage = () => {
   const [loading, setloading] = useState(true);
@@ -36,6 +37,7 @@ const HomePage = () => {
         <>
           <Navbar />
           <HeroSection />
+          <Testimonials />
           <Footer />
         </>
       )}

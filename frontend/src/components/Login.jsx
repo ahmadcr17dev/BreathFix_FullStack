@@ -1,8 +1,13 @@
 // src/components/Login.jsx
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Login = () => {
+  const [user, setuser] = useState({
+    email: "",
+    password: "",
+  });
+
   return (
     <div className="flex items-center justify-center min-h-screen ">
       <div className="bg-white border rounded-lg shadow-lg p-8 w-full max-w-md font-poppins">
@@ -27,6 +32,9 @@ const Login = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Enter your username"
               required
+              name="email"
+              value={user.email}
+              onChange={(e) => setuser({ ...user, email: e.target.value })}
             />
           </div>
 
@@ -43,6 +51,9 @@ const Login = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Enter your password"
               required
+              name="password"
+              value={user.password}
+              onChange={(e) => setuser({ ...user, password: e.target.value })}
             />
           </div>
 
