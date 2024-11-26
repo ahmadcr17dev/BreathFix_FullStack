@@ -1,12 +1,38 @@
 // src/components/Login.jsx
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import toast from "react-hot-toast";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [user, setuser] = useState({
-    email: "",
+    username: "",
     password: "",
   });
+  const navigate = useNavigate();
+
+  const handlesubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "http://localhost/breathfix/backend/api/login.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(user),
+        }
+      );
+      const data = await response.json();
+      if (data.status === "success") {
+        toast.success(data.message);
+        localStorage.setItem('users', JSON.stringify(data.user));
+        navigate("/");
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.", error);
+    }
+  };
 
   return (
     <div className="flex items-center justify-center min-h-screen ">
@@ -18,7 +44,7 @@ const Login = () => {
           We’re glad to have you back! Please log in to continue.
         </p>
 
-        <form>
+        <form onSubmit={handlesubmit}>
           <div className="mb-4">
             <label
               htmlFor="username"
@@ -32,9 +58,9 @@ const Login = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Enter your username"
               required
-              name="email"
-              value={user.email}
-              onChange={(e) => setuser({ ...user, email: e.target.value })}
+              name="username"
+              value={user.username}
+              onChange={(e) => setuser({ ...user, username: e.target.value })}
             />
           </div>
 

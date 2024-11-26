@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import toast from "react-hot-toast";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const users = localStorage.getItem("users");
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.clear("users");
+    toast.success("Logout Successfull");
+    navigate("/");
+  };
 
   return (
     <nav className="bg-gray-800 text-white sticky top-0">
@@ -35,18 +44,30 @@ const Navbar = () => {
             >
               About Us
             </a>
-            <NavLink
-              to="/login"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
-            >
-              Login
-            </NavLink>
-            <NavLink
-              to="/register"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
-            >
-              Register
-            </NavLink>
+            {users ? (
+              <NavLink
+                to="/"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
+                onClick={logout}
+              >
+                LogOut
+              </NavLink>
+            ) : (
+              <>
+                <NavLink
+                  to="/login"
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
+                >
+                  Login
+                </NavLink>
+                <NavLink
+                  to="/register"
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
+                >
+                  Register
+                </NavLink>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,12 +126,21 @@ const Navbar = () => {
             >
               About Us
             </a>
-            <a
-              href="/login"
-              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Login
-            </a>
+            {users ? (
+              <a
+                href="/login"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                LogOut
+              </a>
+            ) : (
+              <a
+                href="/login"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Login
+              </a>
+            )}
             <a
               href="/register"
               className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"

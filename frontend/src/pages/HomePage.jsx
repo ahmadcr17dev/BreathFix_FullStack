@@ -4,6 +4,7 @@ import { Bars } from "react-loader-spinner";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import Testimonials from "../components/Testimonial";
+import Email from "../components/Email";
 
 const HomePage = () => {
   const [loading, setloading] = useState(true);
@@ -38,6 +39,7 @@ const HomePage = () => {
           <Navbar />
           <HeroSection />
           <Testimonials />
+          <Email />
           <Footer />
         </>
       )}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const Register = () => {
@@ -8,22 +8,29 @@ const Register = () => {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const handlesubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost/web project/backend/api/signup.php",
+        "http://localhost/breathfix/backend/api/signup.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newuser),
         }
       );
-      const result = await response.json();
-      toast.success(result.message);
+      const data = await response.json();
+      if (data.status === "success") {
+        toast.success(data.message);
+        setnewuser({ username: "", email: "", password: "" });
+        navigate('/login');
+      } else {
+        toast.error(data.message);
+      }
     } catch (error) {
-      toast("Error Occured");
+      toast("Error Occured", error);
     }
   };
 
