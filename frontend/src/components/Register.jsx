@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [newuser, setnewuser] = useState({
@@ -7,6 +8,24 @@ const Register = () => {
     email: "",
     password: "",
   });
+
+  const handlesubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "http://localhost/web project/backend/api/signup.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newuser),
+        }
+      );
+      const result = await response.json();
+      toast.success(result.message);
+    } catch (error) {
+      toast("Error Occured");
+    }
+  };
 
   return (
     <div className="flex items-center justify-center min-h-screen">
@@ -20,7 +39,7 @@ const Register = () => {
           Create an account to join our amazing community!
         </p>
         {/* Form */}
-        <form>
+        <form onSubmit={handlesubmit}>
           {/* Username */}
           <div className="mb-4">
             <label
