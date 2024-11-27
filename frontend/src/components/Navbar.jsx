@@ -32,18 +32,18 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            <a
-              href="/admin"
+            <NavLink
+              to="/adminlogin"
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
             >
               Admin
-            </a>
-            <a
-              href="/about"
+            </NavLink>
+            <NavLink
+              to="/about"
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
             >
               About Us
-            </a>
+            </NavLink>
             {users ? (
               <NavLink
                 to="/"
