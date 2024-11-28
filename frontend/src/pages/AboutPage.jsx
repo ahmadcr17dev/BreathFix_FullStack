@@ -4,6 +4,7 @@ import { Bars } from "react-loader-spinner";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonial";
 import Email from "../components/Email";
+import ContactForm from "../components/ContactForm";
 
 const AboutPage = () => {
   const [loading, setloading] = useState(true);
@@ -36,6 +37,7 @@ const AboutPage = () => {
       ) : (
         <>
           <Navbar />
+          <ContactForm />
           <Testimonials />
           <Email />
           <Footer />

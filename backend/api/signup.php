@@ -45,7 +45,7 @@ if ($data) {
         if (strlen($password) < 7) {
             echo json_encode(["status" => "error", "message" => "Password must be greater than 7 characters"]);
         } elseif (!$uppercase || !$lowercase || !$number || !$special_character) {
-            echo json_encode(["status" => "error", "message" => "Password must be a combination of uppercase, lowercase, numbers and special characters"]);
+            echo json_encode(["status" => "error", "message" => "Password is not in a valid combination"]);
         } else {
             // hash the password
             $hash_password = password_hash($password, PASSWORD_DEFAULT);
