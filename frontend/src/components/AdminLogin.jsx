@@ -33,7 +33,7 @@ const AdminLogin = () => {
       const data = await response.json();
       if (data.status === "success") {
         toast.success(data.message);
-        navigate("/");
+        navigate("/adminpage");
       } else {
         toast.error(data.message);
       }

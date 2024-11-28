@@ -3,16 +3,11 @@ import toast from "react-hot-toast";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     email: "",
     gender: "",
     description: "",
   });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,7 +25,7 @@ const ContactForm = () => {
         toast.success(data.message);
         console.log("Form Data Submitted:", formData);
         setFormData({
-          fullName: "",
+          name: "",
           email: "",
           gender: "",
           description: "",
@@ -40,6 +35,7 @@ const ContactForm = () => {
       }
     } catch (error) {
       toast.error("Error in Form Submission");
+      console.log("Error ", error);
     }
   };
 
@@ -86,8 +82,10 @@ const ContactForm = () => {
               type="text"
               id="fullName"
               name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               placeholder="Enter your full name"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
@@ -107,7 +105,9 @@ const ContactForm = () => {
               id="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               placeholder="Enter your email"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
@@ -125,7 +125,9 @@ const ContactForm = () => {
                   type="radio"
                   name="gender"
                   value="Male"
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, gender: e.target.value })
+                  }
                   checked={formData.gender === "Male"}
                   className="mr-2"
                 />
@@ -136,7 +138,9 @@ const ContactForm = () => {
                   type="radio"
                   name="gender"
                   value="Female"
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, gender: e.target.value })
+                  }
                   checked={formData.gender === "Female"}
                   className="mr-2"
                 />
@@ -147,7 +151,9 @@ const ContactForm = () => {
                   type="radio"
                   name="gender"
                   value="Other"
-                  onChange={handleChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, gender: e.target.value })
+                  }
                   checked={formData.gender === "Other"}
                   className="mr-2"
                 />
@@ -168,7 +174,9 @@ const ContactForm = () => {
               id="description"
               name="description"
               value={formData.description}
-              onChange={handleChange}
+              onChange={(e) =>
+                setFormData({ ...formData, description: e.target.value })
+              }
               placeholder="Enter your message or description"
               rows="4"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
