@@ -33,12 +33,6 @@ const Navbar = () => {
               Home
             </NavLink>
             <NavLink
-              to="/adminlogin"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
-            >
-              Admin
-            </NavLink>
-            <NavLink
               to="/about"
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
             >
