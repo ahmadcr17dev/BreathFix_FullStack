@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { NavLink, useNavigate } from "react-router-dom";
+import logo from "../images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,34 +15,32 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white sticky top-0">
+    <nav className="bg-gray-100 text-white sticky top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center font-poppins">
           {/* Logo */}
-          <div className="flex-shrink-0 text-2xl font-bold">
-            <a href="/" className="hover:text-gray-300">
-              BreathFix
-            </a>
+          <div className="flex-shrink-0">
+            <img src={logo} alt="logo" width={"70%"} />
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
             <NavLink
               to="/"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
+              className="text-stone-800 hover:underline px-2 py-2 rounded-md text-base font-medium"
             >
               Home
             </NavLink>
             <NavLink
               to="/about"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
+              className="text-stone-800 hover:underline px-2 py-2 rounded-md text-base font-medium"
             >
               About Us
             </NavLink>
             {users ? (
               <NavLink
                 to="/"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
+                className="text-stone-800 hover:underline px-2 py-2 rounded-md text-base font-medium"
                 onClick={logout}
               >
                 LogOut
@@ -50,13 +49,13 @@ const Navbar = () => {
               <>
                 <NavLink
                   to="/login"
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
+                  className="text-stone-800 hover:underline px-2 py-2 rounded-md text-base font-medium"
                 >
                   Login
                 </NavLink>
                 <NavLink
                   to="/register"
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-semibold"
+                  className="text-stone-800 hover:underline px-2 py-2 rounded-md text-base font-medium"
                 >
                   Register
                 </NavLink>

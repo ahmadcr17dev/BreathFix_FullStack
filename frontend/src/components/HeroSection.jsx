@@ -9,16 +9,18 @@ import one from "../images/one.png";
 import two from "../images/two.png";
 import three from "../images/three.png";
 import four from "../images/four.png";
+import sign from "../images/sign.svg";
 
 const HeroSection = () => {
   return (
     <>
-      <div className="bg-white font-poppins mt-16 px-4 py-10 md:py-16">
+      <div className="font-poppins mt-16 px-4 py-10 md:py-16">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           {/* Left Column */}
           <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-5 font-poppins">
-              Understanding COPD: Causes, Symptoms, and Effective Management
+            <h1 className="text-3xl md:text-7xl font-bold text-gray-800 mb-5 font-poppins">
+              Caring For <span className="text-blue-500">Health</span> Caring
+              For You
             </h1>
             <p
               className="text-gray-600 mb-6 font-poppins"
@@ -29,10 +31,9 @@ const HeroSection = () => {
                 Chronic Obstructive Pulmonary Disease (COPD){" "}
               </span>{" "}
               is a progressive lung condition that obstructs airflow, making it
-              difficult to breathe. It commonly results from long-term exposure
-              to irritants like cigarette smoke, air pollution, or workplace
-              dust and chemicals. COPD encompasses conditions such as emphysema
-              and chronic bronchitis.
+              difficult to breathe. A brief statement outlining the purpose and
+              mission of the clinic. This can include the commitment to patient
+              care, community health.
             </p>
             <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-16 rounded shadow-md">
               Learn More
@@ -111,28 +112,52 @@ const HeroSection = () => {
         </div>
       </section>
       <section className="font-poppins mt-36 text-center">
-        <h1 className="text-5xl font-medium">Our Medical Specialist</h1>
+        <div className="flex flex-row justify-center">
+          <img src={sign} alt="sign" className="mr-2" />
+          <h3 className="text-blue-700 font-semibold text-2xl">Discover Doctors</h3>
+        </div>
+        <h1 className="text-5xl font-medium">Meet Our Medical Specialist</h1>
         <div className="flex flex-row justify-center mt-16 px-16">
           <div>
-            <img src={one} alt="dr. pic" className="mx-auto rounded-xl" style={{width: '90%', height: '85%'}}/>
+            <img
+              src={one}
+              alt="dr. pic"
+              className="mx-auto rounded-xl"
+              style={{ width: "90%", height: "85%" }}
+            />
             <p className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold py-2 px-16 rounded shadow-md w-fit mx-auto mt-8">
               Dr. Twanda Costos
             </p>
           </div>
           <div>
-            <img src={two} alt="dr. pic" className="mx-auto rounded-xl" style={{width: '90%', height: '85%'}}/>
+            <img
+              src={two}
+              alt="dr. pic"
+              className="mx-auto rounded-xl"
+              style={{ width: "90%", height: "85%" }}
+            />
             <p className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold py-2 px-16 rounded shadow-md w-fit mx-auto mt-8">
               Dr. Nell Domron
             </p>
           </div>
           <div>
-            <img src={three} alt="dr. pic" className="mx-auto rounded-xl" style={{width: '90%', height: '85%'}}/>
+            <img
+              src={three}
+              alt="dr. pic"
+              className="mx-auto rounded-xl"
+              style={{ width: "90%", height: "85%" }}
+            />
             <p className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold py-2 px-16 rounded shadow-md w-fit mx-auto mt-8">
               Dr. Roy Nawakosko
             </p>
           </div>
           <div>
-            <img src={four} alt="dr. pic" className="mx-auto rounded-xl" style={{width: '90%', height: '85%'}}/>
+            <img
+              src={four}
+              alt="dr. pic"
+              className="mx-auto rounded-xl"
+              style={{ width: "90%", height: "85%" }}
+            />
             <p className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold py-2 px-16 rounded shadow-md w-fit mx-auto mt-8">
               Dr. Jerry Roy
             </p>

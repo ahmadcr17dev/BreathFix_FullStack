@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import Testimonials from "../components/Testimonial";
 import Email from "../components/Email";
+import Services from "../components/Services";
 
 const HomePage = () => {
   const [loading, setloading] = useState(true);
@@ -17,7 +18,7 @@ const HomePage = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Home - BreathFix";
+    document.title = "Home - MediaX";
   });
 
   return (
@@ -38,6 +39,7 @@ const HomePage = () => {
         <>
           <Navbar />
           <HeroSection />
+          <Services />
           <Testimonials />
           <Email />
           <Footer />
