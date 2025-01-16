@@ -10,6 +10,9 @@ import two from "../images/two.png";
 import three from "../images/three.png";
 import four from "../images/four.png";
 import sign from "../images/sign.svg";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
 
 const HeroSection = () => {
   return (
@@ -18,7 +21,7 @@ const HeroSection = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           {/* Left Column */}
           <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-            <h1 className="text-3xl md:text-7xl font-bold text-gray-800 mb-5 font-poppins">
+            <h1 className="text-3xl md:text-6xl font-bold text-gray-800 mb-5 font-poppins">
               Caring For <span className="text-blue-500">Health</span> Caring
               For You
             </h1>
@@ -35,7 +38,7 @@ const HeroSection = () => {
               mission of the clinic. This can include the commitment to patient
               care, community health.
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-16 rounded shadow-md">
+            <button className="bg-blue-700 hover:bg-blue-600 text-white font-medium py-2 px-16 rounded-full shadow-md">
               Learn More
             </button>
           </div>
@@ -114,7 +117,9 @@ const HeroSection = () => {
       <section className="font-poppins mt-36 text-center">
         <div className="flex flex-row justify-center">
           <img src={sign} alt="sign" className="mr-2" />
-          <h3 className="text-blue-700 font-semibold text-2xl">Discover Doctors</h3>
+          <h3 className="text-blue-700 font-semibold text-2xl">
+            Discover Doctors
+          </h3>
         </div>
         <h1 className="text-5xl font-medium">Meet Our Medical Specialist</h1>
         <div className="flex flex-row justify-center mt-16 px-16">
@@ -125,7 +130,7 @@ const HeroSection = () => {
               className="mx-auto rounded-xl"
               style={{ width: "90%", height: "85%" }}
             />
-            <p className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold py-2 px-16 rounded shadow-md w-fit mx-auto mt-8">
+            <p className="bg-blue-700 hover:bg-blue-600 text-white cursor-pointer font-medium py-2 px-16 rounded-full shadow-md w-fit mx-auto mt-8">
               Dr. Twanda Costos
             </p>
           </div>
@@ -136,7 +141,7 @@ const HeroSection = () => {
               className="mx-auto rounded-xl"
               style={{ width: "90%", height: "85%" }}
             />
-            <p className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold py-2 px-16 rounded shadow-md w-fit mx-auto mt-8">
+            <p className="bg-blue-700 hover:bg-blue-600 text-white cursor-pointer font-medium py-2 px-16 rounded-full shadow-md w-fit mx-auto mt-8">
               Dr. Nell Domron
             </p>
           </div>
@@ -147,7 +152,7 @@ const HeroSection = () => {
               className="mx-auto rounded-xl"
               style={{ width: "90%", height: "85%" }}
             />
-            <p className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold py-2 px-16 rounded shadow-md w-fit mx-auto mt-8">
+            <p className="bg-blue-700 hover:bg-blue-600 text-white cursor-pointer font-medium py-2 px-16 rounded-full shadow-md w-fit mx-auto mt-8">
               Dr. Roy Nawakosko
             </p>
           </div>
@@ -158,7 +163,7 @@ const HeroSection = () => {
               className="mx-auto rounded-xl"
               style={{ width: "90%", height: "85%" }}
             />
-            <p className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold py-2 px-16 rounded shadow-md w-fit mx-auto mt-8">
+            <p className="bg-blue-700 hover:bg-blue-600 text-white cursor-pointer font-medium py-2 px-16 rounded-full shadow-md w-fit mx-auto mt-8">
               Dr. Jerry Roy
             </p>
           </div>

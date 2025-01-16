@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
+import '@fontsource/poppins/500.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -13,7 +13,7 @@ const RegisterPage = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Register - BreathFix";
+    document.title = "Register - Mediax";
   });
 
   return (

@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost/breathfix/backend/api/login.php",
+        "http://localhost/mediax/backend/api/login.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -38,7 +38,7 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen ">
       <div className="bg-white border rounded-lg shadow-lg p-8 w-full max-w-md font-poppins">
         <h1 className="text-2xl font-bold text-center text-indigo-600 mb-4">
-          Welcome to BreathFix
+          Welcome to Mediax
         </h1>
         <p className="text-center text-gray-500 mb-6">
           We’re glad to have you back! Please log in to continue.

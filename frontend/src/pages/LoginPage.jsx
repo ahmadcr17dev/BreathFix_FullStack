@@ -13,7 +13,7 @@ const LoginPage = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Login - BreathFix";
+    document.title = "Login - Mediax";
   });
 
   return (

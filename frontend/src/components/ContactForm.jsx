@@ -13,7 +13,7 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost/breathfix/backend/api/contactform.php",
+        "http://localhost/mediax/backend/api/contactform.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

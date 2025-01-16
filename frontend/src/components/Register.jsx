@@ -14,7 +14,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost/breathfix/backend/api/signup.php",
+        "http://localhost/mediax/backend/api/signup.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -39,7 +39,7 @@ const Register = () => {
       <div className="bg-white p-8 border rounded-lg shadow-lg w-full max-w-md font-poppins">
         {/* Website Name */}
         <h1 className="text-2xl font-bold text-indigo-600 text-center mb-4">
-          BreathFix
+          Mediax
         </h1>
         {/* Warming Line */}
         <p className="text-center text-gray-600 mb-6">

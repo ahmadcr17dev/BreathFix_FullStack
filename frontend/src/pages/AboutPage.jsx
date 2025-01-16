@@ -17,7 +17,7 @@ const AboutPage = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "About - BreathFix";
+    document.title = "About - Mediax";
   });
 
   return (
