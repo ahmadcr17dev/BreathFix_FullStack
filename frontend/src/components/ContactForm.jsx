@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import "@fontsource/poppins/400.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +46,7 @@ const ContactForm = () => {
         <h3 className="text-4xl font-semibold font-poppins">
           Get in Touch with COPD Experts for Support
         </h3>
-        <p className="mt-16 text-sm">
+        <p className="mt-16 text-sm font-light">
           At the COPD Website, we prioritize your well-being by providing expert
           guidance and tailored support to help you navigate the challenges of
           Chronic Obstructive Pulmonary Disease (COPD). Whether you’re seeking
